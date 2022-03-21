@@ -1,0 +1,155 @@
+body {
+    background: var(--secondary-background);
+    color: var(--secondary-color);
+    font-family: Roboto Mono,monospace;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+}
+.universal-nav{
+    -webkit-box-pack: justify;
+    align-items: flex-start;
+    background: black;
+    justify-content: space-between;
+    display: flex;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 15px;
+}
+.universal-nav-left {
+    -webkit-box-flex: 1;
+    display: flex;
+    flex: 1 0 30px;
+    margin-left: 0;
+    z-index: 2000;
+}
+.fcc_searchBar {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    font-family: Lato, sans-serif;
+    max-height: 33px;
+    padding: 0 10px;
+}
+.fcc_src_only {
+    clip: rect(0,0,0,0);
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.ais-SearchBox {
+    color: #3a4570;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.ais-SearchBox-input {
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    width: 100%;
+    
+    width: calc(100vw - 350px);
+}
+.fcc_searchBar .ais-SearchBox-form {
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: flex;
+    position: absolute;
+    right: 15px;
+    top: var(header-height);
+}
+.fcc_searchBar .ais-SearchBox-input {
+    background-color: var(--gray-75);
+    color: var(--gray-00);
+    z-index: 100;
+}
+.ais-SearchBox-submit {
+    left: 0.3rem;
+    top: 59.5%;
+}
+
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.ais-SearchBox-loadingIndicator, .ais-SearchBox-reset, .ais-SearchBox-submit {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 20px;
+    position: absolute;
+    right: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 20px;
+    z-index: 100;
+}
+.ais-ClearRefinements-button, .ais-CurrentRefinements-delete, .ais-CurrentRefinements-reset, .ais-HierarchicalMenu-showMore, .ais-InfiniteHits-loadMore, .ais-InfiniteResults-loadMore, .ais-Menu-showMore, .ais-RangeInput-submit, .ais-RefinementList-showMore, .ais-SearchBox-reset, .ais-SearchBox-submit {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.ais-SearchBox-reset {
+    display: none;
+    right: 0.3rem;
+}
+
+@media (min-width: 980px) {
+    .fcc_searchBar{
+        max-width: 520px;
+        position: relative;
+    }
+    .fcc_searchBar .ais-SearchBox-form {
+        margin-bottom: 0;
+        position: static;
+        right: 15px;
+        top: auto;
+    }
+    .ais-SearchBox-input {
+        max-width: 500px;
+        width: 100%;
+    }
+    .ais-SearchBox-submit {
+        left: 0.85rem;
+    }
+}

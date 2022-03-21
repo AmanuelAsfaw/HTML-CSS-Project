@@ -1,0 +1,39 @@
+/* your element and it would be 142px wide, rather than 100px 
+ * extrinsic sizing : the size decide by your input size
+  *intrinsic sizing : let the browser make decisions for you based on the content size
+*/
+
+/* The areas of the box model
+ *  Boxes are made up of distinct box model areas that all do a specific job.
+ * content box : which is the area that the content lives in
+ * padding box : surrounds the content box and is the space created by the padding property. 
+ * border box : surrounds the padding box and its space is occupied by the border value
+ * margin box : is the space around your box, defined by the margin rule on your box. Properties such as outline and box-shadow occupy this space too because they are painted on top, so they don't affect the size of our box
+  */
+  
+/* Controlling the box model
+ * for <div> display value is block
+ * for <li> display default value is list-item
+ * for <span> display default value is inline
+*/
+
+.my-box {
+    /* The min-content keyword tells the box to only be as wide as the intrinsic minimum width of its content  */
+    width: min-content;
+    border: 1px solid;
+    padding: 20px;
+
+    /* overflow => When content is too big for the box it is in, we call this overflow. You can manage how an element handles overflow content, using the overflow property.
+     * hiden : to hide the overflow view
+     * auto : to make scrol view for overflow text views only vertically or oneside oriented
+     * scroll : to side oriented verically and horizontally
+     * visible : default and display content out of borders
+     */
+    overflow: hidden;
+  }
+p {
+    width: 100px;
+    height: 50px;
+    padding: 20px;
+    border: 1px solid;
+  }
