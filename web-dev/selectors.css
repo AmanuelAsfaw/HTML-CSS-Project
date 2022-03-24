@@ -1,0 +1,47 @@
+article p:first-of-type {
+    color: red;
+    font-size: 1.5em;
+}
+/* universal selector => also known as a wildcard—matches any element. */
+* {
+    color: hotpink;
+}
+
+/* Type selector =>  matches a HTML element directly. */
+section {
+    padding: 2em;
+    border: 1px solid;
+}
+/* Class selector => matches any element that has that class applied to it.*/
+.my-class {
+    color: red;
+  }
+/* ID selector */
+#rad {
+    border: 1px solid blue;
+  }
+/* Attribute selector =>  look for elements that have a certain HTML attribute, or have a certain value for an HTML attribute*/
+[data-type='primary'] {
+    color: rebeccapurple;
+}
+/* Descendant combinator  Selector allows us to target a child element 
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator
+ */
+
+section h1 {
+    color: rgb(20, 52, 228);
+}
+/* Next sibling combinator or Adjacent sibling combinator => separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element 
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator
+ */
+
+section h2:first-of-type + h2 {
+    color: black;
+}
+/* Subsequent- sibling combinator or general sibling combinator (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element. 
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator
+ */
+section h3 ~ h3 {
+    size: 20px;
+    color: rgb(47, 30, 4);
+}
