@@ -40,7 +40,9 @@ Being able to specify two values for the same property can be a simple way to cr
 #### Inline style attribute - 1000 points
 #### ```!important``` rule - 10,000 points
 ## Visualizing specificity
+
 ![](https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/McrFhjqHXMznUzXbRuJ6.svg)
+
 The left group is id selectors. The second group is class, attribute, and pseudo-class selectors. The final group is element and pseudo-element selectors.
 ### A matching specificity score sees the newest instance win
 
@@ -51,3 +53,25 @@ The left group is id selectors. The second group is class, attribute, and pseudo
 #### The ```initial``` keyword
 #### The ```unset``` keyword
 The ```unset``` property behaves differently if a property is inheritable or not. If a property is inheritable, the ```unset``` keyword will be the same as ```inherit```. If the property is not inheritable, the ```unset``` keyword is equal to ```initial```.
+
+# Color
+### Numeric colors
+#### Hex colors
+Hexadecimal notation (often shortened to hex) is a shorthand syntax for RGB, which assigns a numeric value to red green and blue, which are the three **primary colors**.
+
+You can also define an alpha value with any numerical colors. An alpha value is a percentage of transparency. In hex code, you add another two digits to the six digit sequence, making an eight digit sequence. For example, to set black in hex code, write ```#000000```. To add a 50% transparency, change it to ```#00000080```.
+#### RGB (Red, Green, Blue)
+
+An alpha is set in rgb() in one of two ways. Either add a / after the red, green and blue parameters, or use the rgba() function.
+
+For example, to set a 50% alpha black in modern browsers, write: ```rgb(0 0 0 / 50%)``` or ```rgb(0 0 0 / 0.5)```. For wider support, using the ```rgba()``` function, write: ```rgba(0, 0, 0, 50%)``` or ```rgba(0, 0, 0, 0.5)```.
+
+#### HSL (Hue, Saturation, Lightness)
+HSL stands for hue, saturation and lightness. Hue describes the value on the color wheel, from 0 to 360 degrees, starting with red (being both 0 and 360). A hue of 180, or 50% would be in the blue range.
+
+![](https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/ob7MTste1Obu9AoLvbKq.svg)
+
+Saturation is how vibrant the selected hue is. A fully desaturated color (with a saturation of 0%) will appear grayscale. And finally, lightness is the parameter which describes the scale from white to black of added light. A lightness of 100% will always give you white.
+
+### Color Keywords [Web.dev](https://web.dev/learn/css/color/)
+There are [148 named colors in CSS](https://developer.mozilla.org/docs/Web/CSS/color_value#color_keywords). These are plain English names such as purple, tomato and goldenrod.
