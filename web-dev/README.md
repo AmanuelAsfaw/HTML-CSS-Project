@@ -18,6 +18,9 @@ The cascade algorithm is split into 4 distinct stages.
 
 4.Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type
 [cascade](https://web.dev/learn/css/the-cascade/)
+
+![Origin](https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/zPdaZ6G11oYrgJ78EfF7.svg)
+
 #### Position and order of appearance
 If you have a ```<link>``` that includes CSS at the top of your HTML page, then another ```<link>``` that includes CSS at the bottom of your page: the bottom ```<link>``` will have the most specificity. The same thing happens with embedded ```<style>``` elements, too. 
 
@@ -26,3 +29,17 @@ An inline style attribute with ```CSS``` declared in it will override all other 
 Being able to specify two values for the same property can be a simple way to create fallbacks for browsers that do not support a particular value. In this next example, font-size is declared twice. If ```clamp()``` is supported in the browser, then the previous font-size declaration will be discarded.
 
 [clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)
+
+# Specificity
+
+## Specificity scoring
+#### Universal selector - 0 points
+#### Element or pseudo-element selector - 1 points
+#### Class, pseudo-class, or attribute selector - 10 points
+#### ID selector - 100 points
+#### Inline style attribute - 1000 points
+#### ```!important``` rule - 10,000 points
+## Visualizing specificity
+![](https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/McrFhjqHXMznUzXbRuJ6.svg)
+The left group is id selectors. The second group is class, attribute, and pseudo-class selectors. The final group is element and pseudo-element selectors.
+### A matching specificity score sees the newest instance win
