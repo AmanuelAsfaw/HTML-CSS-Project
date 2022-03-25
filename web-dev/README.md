@@ -43,3 +43,11 @@ Being able to specify two values for the same property can be a simple way to cr
 ![](https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/McrFhjqHXMznUzXbRuJ6.svg)
 The left group is id selectors. The second group is class, attribute, and pseudo-class selectors. The final group is element and pseudo-element selectors.
 ### A matching specificity score sees the newest instance win
+
+# Inheritance
+
+### How to explicitly inherit and control inheritance
+#### The ```inherit``` keyword
+#### The ```initial``` keyword
+#### The ```unset``` keyword
+The ```unset``` property behaves differently if a property is inheritable or not. If a property is inheritable, the ```unset``` keyword will be the same as ```inherit```. If the property is not inheritable, the ```unset``` keyword is equal to ```initial```.
