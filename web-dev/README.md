@@ -75,3 +75,41 @@ Saturation is how vibrant the selected hue is. A fully desaturated color (with a
 
 ### Color Keywords [Web.dev](https://web.dev/learn/css/color/)
 There are [148 named colors in CSS](https://developer.mozilla.org/docs/Web/CSS/color_value#color_keywords). These are plain English names such as purple, tomato and goldenrod.
+
+# Sizing Units
+
+### Percentages
+When using a percentage in CSS you need to know how the percentage is calculated. For example,```width``` is calculated as a percentage of the available width in the parent element.
+
+```
+div {
+  width: 300px;
+  height: 100px;
+}
+
+div p {
+  width: 50%; 
+}
+```
+
+In the above example, the width of ```div p``` is ```150px```.
+
+### Dimensions and lengths
+
+#### Absolute lengths
+
+All absolute lengths resolve against the same base, making them predictable wherever they're used in your CSS. For example, if you use ```cm``` to size your element and then print, it should be accurate if you compared it to a ruler.
+
+| Unit   |      Name      |  Equivalent to |
+|----------|:-------------:|------:|
+| cm |  left-aligned | 1cm = 96px/2.54 |
+| mm |    Millimeters   |   1mm = 1/10th of 1cm |
+| Q | Quarter-millimeters |    1Q = 1/40th of 1cm |
+| in | Inches | 1in = 2.54cm = 96px |
+| pc | Picas | 1pc = 1/6th of 1in |
+| pt | Points | 1pt = 1/72th of 1in |
+| px | Pixels | 1px = 1/96th of 1in |
+
+#### Relative lengths
+
+A relative length is calculated against a base value, much like a percentage. The difference between these and percentages is that you can contextually size elements. This means that CSS has units such as ch that use the text size as a basis, and vw which is based on the width of the viewport (your browser window). Relative lengths are particularly useful on the web due to its responsive nature.
