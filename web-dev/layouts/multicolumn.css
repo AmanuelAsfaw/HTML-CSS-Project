@@ -1,0 +1,12 @@
+section {
+    box-sizing: border-box;
+    border: 1px solid blue;
+    width: 100%;
+    float: left;
+}
+
+.countries {
+    column-count: 4;
+    column-gap: 1em;
+}
+  
