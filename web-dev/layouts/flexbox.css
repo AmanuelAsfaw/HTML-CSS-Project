@@ -1,0 +1,13 @@
+.my-element {    
+    display: flex;
+    justify-content: space-evenly;
+}
+.my-element-block {
+    display: block;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.box {
+    border: 1px solid rgb(46, 43, 43);
+}
