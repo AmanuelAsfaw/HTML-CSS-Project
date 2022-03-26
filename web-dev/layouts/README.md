@@ -61,3 +61,62 @@ values are ```flex-start``` ```flex-end``` ```center``` ```space-around``` ```sp
 **CSS Grid Layout** excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.
 
 ## Flow layout
+
+Normal Flow, or Flow Layout, is the way that Block and Inline elements are displayed on a page before any changes are made to their layout. The flow is essentially a set of things that are all working together and know about each other in your layout. Once something is taken out of flow it works independently.
+
+In normal flow, inline elements display in the inline direction, that is in the direction words are displayed in a sentence according to the Writing Mode of the document. Block elements display one after the other, as paragraphs do in the Writing Mode of that document. 
+
+### Inline block
+
+Remember how surrounding elements don't respect block margin and padding on an inline element? With inline-block you can cause that to happen.
+
+### Floats 
+
+If you have an image that sits within a paragraph of text, wouldn't it be handy for that text to wrap around that image
+```
+img {
+	float: left;
+	margin-right: 1em;
+}
+```
+The float property instructs an element to "float" to the direction specified. The image in this example is instructed to float left, which then allows sibling elements to "wrap" around it. You can instruct an element to float ```left```, ```right``` or ```inherit```.
+
+![](http://www.vanseodesign.com/blog/wp-content/uploads/2009/10/wrapping-float.png)
+
+### Multicolumn layout
+
+If you have a really long list of elements, such as a list of all of the countries of the world, it can result in a lot of scrolling and time wasted for a user. It can also create excess whitespace on the page. With CSS multicolumn, you can split this into multiple columns to help with both of these issues.
+
+### Positioning 
+
+[MDN Reading Resource](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+
+The position CSS property sets how an element is positioned in a document. The ```top```, ```right```, ```bottom```, and ```left``` properties determine the final location of positioned elements.
+
+#### values
+
+##### ***static***
+
+The element is positioned according to the normal flow of the document. The ```top```, ```right```, ```bottom```, ```left```, and ```z-index``` properties have no effect. This is the default value.
+
+##### ***relative***
+
+The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of ```top```, ```right```, ```bottom```, and ```left```. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were ```static```.
+
+This value creates a new stacking context when the value of ```z-index``` is not ```auto```. Its effect on ```table-*-group```, table-row, ```table-column```, ```table-cell```, and ```table-caption``` elements is undefined.
+
+##### ***absolute***
+
+The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of ```top```, ```right```, ```bottom```, and ```left```.
+
+This value creates a new stacking context when the value of ```z-index``` is not ```auto```. The margins of absolutely positioned boxes do not collapse with other margins.
+
+##### ***fixed***
+
+The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport, except when one of its ancestors has a ```transform```, ```perspective```, or ```filter``` property set to something other than ```none``` (see the CSS Transforms Spec), in which case that ancestor behaves as the containing block. (Note that there are browser inconsistencies with ```perspective``` and ```filter``` contributing to containing block formation.) Its final position is determined by the values of ```top```, ```right```, ```bottom```, and ```left```.
+
+##### ***sticky***
+
+The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of ```top```, ```right```, ``bottom``, and ```left```. The offset does not affect the position of any other elements.
+
+This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when ```overflow``` is ```hidden```, ```scroll```, ```auto```, or ```overlay```), even if that ancestor isn't the nearest actually scrolling ancestor.

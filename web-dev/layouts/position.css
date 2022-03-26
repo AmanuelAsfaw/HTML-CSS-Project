@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+  }
+  
+  #two {
+    position: static;
+    top: 20px;
+    left: 20px;
+    background: blue;
+  }
+  #three {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: rgb(76, 76, 240);
+  }
+  #four {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgb(28, 142, 236);
+  }
+  #five {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgb(238, 40, 245);
+  }
+  #six {
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    background: rgb(119, 251, 42);
+  }
